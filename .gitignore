@@ -1,0 +1,35 @@
+# --- Large binaries / model weights (never commit) ---
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+weights/
+ckpt/
+ckpt_stage_1/
+ckpt_stage_2/
+
+# --- Data & feature caches ---
+*.npz
+*.npy
+data/
+*.xlsx
+*.csv
+
+# --- Local machine paths / secrets ---
+configs/paths.yaml
+.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- Editors / OS ---
+.idea/
+.vscode/
+.DS_Store

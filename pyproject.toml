@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "andrew-pathology"
+version = "0.1.0"
+description = "Prostate pathology WSI MIL: slide-encoder pretraining (PRISM) + 5 downstream tasks (BCR survival, gene expression, molecular subtype, pathological subtype, Gleason/ISUP grading)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "torch>=2.0",
+    "timm>=1.0.0",
+    "transformers>=4.40",
+    "huggingface_hub>=0.23",
+    "safetensors>=0.4",
+    "einops",
+    "numpy",
+    "pandas",
+    "openpyxl",
+    "scikit-learn",
+    "scikit-survival",
+    "coral-pytorch",
+    "monai",
+    "captum",
+    "lifelines",
+    "opencv-python",
+    "scikit-image",
+    "matplotlib",
+    "tqdm",
+    "pyyaml",
+]
+
+[tool.setuptools.packages.find]
+include = ["common*", "tasks*", "slide_pretrain*", "tools*"]
